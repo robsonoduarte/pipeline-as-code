@@ -148,6 +148,12 @@
 					        <includes>
 					            <include>**/*IT.java</include>
 					        </includes>
+					        <systemProperties>
+					        	<property>
+              						<name>phantomjs.binary.path</name>
+              						<value>E:\apps\phantomjs-2.1.1-windows\bin\phantomjs.exe</value>
+            					</property>
+					        </systemProperties>
 					    </configuration>
 					    <executions>
 					        <execution>

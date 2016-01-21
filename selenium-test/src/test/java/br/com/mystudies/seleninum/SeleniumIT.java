@@ -8,8 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.thoughtworks.selenium.Selenium;
 import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
@@ -24,7 +22,7 @@ public class SeleniumIT {
 
 	@Before
 	public void setUp() throws Exception {
-		WebDriver driver = new PhantomJSDriver(temp());
+		WebDriver driver = new PhantomJSDriver();
 		String baseUrl = "http://52.34.24.50:8080/selenium-test/";
 		selenium = new WebDriverBackedSelenium(driver, baseUrl);
 	}
@@ -67,11 +65,11 @@ public class SeleniumIT {
 
 
 
-	private DesiredCapabilities temp() {
+/*	private DesiredCapabilities temp() {
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 		desiredCapabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "E:/apps/phantomjs-2.1.1-windows/bin/phantomjs.exe");
 		return desiredCapabilities;
-	}
+	}*/
 
 
 

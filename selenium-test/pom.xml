@@ -111,7 +111,7 @@
 				  		</configuration>
 				  		<executions>
 				  			<execution>
-				  				<phase>install</phase>
+				  				<phase>package</phase>
 				  				<goals>
 				  					<goal>deploy</goal>
 				  				</goals>

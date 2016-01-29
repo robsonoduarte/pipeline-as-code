@@ -35,6 +35,8 @@ public class SeleniumIT {
 
 
 
+
+
 	@Test
 	public void testSelinum() throws Exception {
 		selenium.open("/selenium-test/");

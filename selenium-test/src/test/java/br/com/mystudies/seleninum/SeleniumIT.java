@@ -14,15 +14,26 @@ import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
 
 
 public class SeleniumIT {
-	
+
 	private Selenium selenium;
 
 	@Before
 	public void setUp() throws Exception {
 		WebDriver driver = new FirefoxDriver();
-		String baseUrl = "http://localhost:8080/selenium-test/";
+		String baseUrl = "http://52.35.192.238:8080/selenium-test/";
 		selenium = new WebDriverBackedSelenium(driver, baseUrl);
 	}
+
+
+
+	@After
+	public void tearDown() throws Exception {
+		selenium.stop();
+	}
+
+
+
+
 
 	@Test
 	public void testSelinum() throws Exception {
@@ -31,17 +42,21 @@ public class SeleniumIT {
 		selenium.type("id=password", "Ana");
 		selenium.click("css=input[type=\"submit\"]");
 		selenium.waitForPageToLoad("30000");
-		
-		
-		assertThat(selenium.getBodyText(), equalTo("Welcome Robson"));		
+
+
+		assertThat(selenium.getBodyText(), equalTo("Welcome Robson"));
 	}
 
-	
-	
-	@After
-	public void tearDown() throws Exception {
-		selenium.stop();
-	}
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -26,6 +26,8 @@ public class SeleniumIT {
 
 
 
+
+
 	@After
 	public void tearDown() throws Exception {
 		selenium.stop();

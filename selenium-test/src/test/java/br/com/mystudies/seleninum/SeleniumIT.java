@@ -7,7 +7,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.thoughtworks.selenium.Selenium;
 import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
@@ -22,10 +23,15 @@ public class SeleniumIT {
 
 	@Before
 	public void setUp() throws Exception {
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new PhantomJSDriver(temp());
 		String baseUrl = "http://52.34.24.50:8080/selenium-test/";
 		selenium = new WebDriverBackedSelenium(driver, baseUrl);
 	}
+
+
+
+
+
 
 
 
@@ -60,6 +66,9 @@ public class SeleniumIT {
 
 
 
+	private DesiredCapabilities temp() {
+		return new DesiredCapabilities();
+	}
 
 
 

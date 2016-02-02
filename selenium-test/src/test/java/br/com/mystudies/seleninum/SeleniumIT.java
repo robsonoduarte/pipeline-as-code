@@ -23,7 +23,7 @@ public class SeleniumIT {
 	@Before
 	public void setUp() throws Exception {
 		WebDriver driver = new FirefoxDriver();
-		String baseUrl = "http://52.35.192.238:8080/selenium-test/";
+		String baseUrl = "http://52.34.24.50:8080/selenium-test/";
 		selenium = new WebDriverBackedSelenium(driver, baseUrl);
 	}
 

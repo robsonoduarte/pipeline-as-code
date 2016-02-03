@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.thoughtworks.selenium.Selenium;
@@ -67,7 +68,9 @@ public class SeleniumIT {
 
 
 	private DesiredCapabilities temp() {
-		return new DesiredCapabilities();
+		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+		desiredCapabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "E:/apps/phantomjs-2.1.1-windows/bin/phantomjs.exe");
+		return desiredCapabilities;
 	}
 
 

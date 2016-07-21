@@ -16,8 +16,6 @@ dependencies {
 }
 
 
-
-
 // config provided scope
         <dependency>
             <groupId>javax</groupId>

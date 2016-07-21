@@ -3,17 +3,33 @@ apply plugin: 'eclipse'
 
 
 
-
-buildscript {
-    repositories { mavenLocal(); jcenter() }
-}
-
-
 repositories {
     jcenter()
 }
 
+
 dependencies {
+	compile 'com.github.detro:phantomjsdriver:1.2.0'
+
 	testCompile 'junit:junit:4.12'
+	testCompile 'org.seleniumhq.selenium:selenium-java:2.49.0'
 }
+
+
+
+
+// config provided scope
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+// after run build
+// after see the:
+https://www.google.com.br/search?q=gradle+integretation+test&ie=utf-8&oe=utf-8&client=firefox-b-ab&gfe_rd=cr&ei=mhCQV8DHBs7V8wfExqIQ#safe=active&q=gradle+integration+test
+
+
 

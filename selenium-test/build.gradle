@@ -1,6 +1,16 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'war'
+apply plugin: 'docker'
+
+
+buildscript {
+    repositories { mavenLocal(); jcenter() }
+    dependencies {
+        classpath 'se.transmode.gradle:gradle-docker:1.2'
+    }
+}
+
 
 
 
@@ -46,4 +56,15 @@ task itest(type: Test) {
   testLogging {
     events "passed", "skipped", "failed"
   }
+}
+
+
+docker {
+   baseImage 'jetty:9.3.10-jre8-alpine'
+}
+
+
+task dockerImage(type: Docker, dependsOn: war) {
+	applicationName = 'empresas'
+	addFile war.archivePath, '/var/lib/jetty/webapps' + war.archiveName
 }

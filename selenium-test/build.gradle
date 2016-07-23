@@ -66,5 +66,5 @@ docker {
 
 task dockerImage(type: Docker, dependsOn: war) {
 	applicationName = 'empresas'
-	addFile war.archivePath, '/var/lib/jetty/webapps' + war.archiveName
+	addFile war.archivePath, '/var/lib/jetty/webapps/' + war.archiveName
 }

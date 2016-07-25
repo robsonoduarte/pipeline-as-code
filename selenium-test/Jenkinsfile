@@ -1,0 +1,19 @@
+node {
+   stage 'Checkout the source code '
+
+   stage 'Run Assemble Project'
+
+   stage 'Run Unit Tests '
+
+   stage 'Run Build Docker Image'
+
+   stage 'Run Docker Image'
+
+   stage 'Run Integration Tests'
+
+}
+
+
+
+
+

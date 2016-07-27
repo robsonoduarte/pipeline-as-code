@@ -2,8 +2,8 @@ node('seleinum-test') {
    stage 'Checkout the source code '
    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/robsonoduarte/tests.git']]])
 
-
    stage 'Run Assemble Project'
+   sh 'gradle assemble'
 
    stage 'Run Unit Tests '
 

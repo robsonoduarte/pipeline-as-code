@@ -1,4 +1,4 @@
-node('seleinum-test') {
+node{
    stage 'Checkout the source code '
    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/robsonoduarte/tests.git']]])
 

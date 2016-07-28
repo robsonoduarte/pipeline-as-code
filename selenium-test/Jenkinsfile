@@ -6,6 +6,7 @@ node{
    sh 'gradle assemble'
 
    stage 'Run Unit Tests '
+   sh 'gradle test'
 
    stage 'Run Build Docker Image'
 

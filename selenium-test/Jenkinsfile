@@ -15,6 +15,7 @@ node{
    sh 'docker run ...'
 
    stage 'Run Integration Tests'
+   sh 'gradle itest'
 
 }
 

@@ -12,6 +12,7 @@ node{
    sh 'gradle dockerImage'
 
    stage 'Run Docker Image'
+   sh 'docker run ...'
 
    stage 'Run Integration Tests'
 

@@ -2,13 +2,20 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'war'
 apply plugin: 'docker'
+apply plugin: 'jmeter'
 
 
 buildscript {
-    repositories { mavenLocal(); jcenter() }
+    repositories {
+    	mavenCentral() 
+    	jcenter()
+    }
+    
     dependencies {
         classpath 'se.transmode.gradle:gradle-docker:1.2'
+        classpath 'com.github.kulya:jmeter-gradle-plugin:1.3.4-2.13'
     }
+    
 }
 
 

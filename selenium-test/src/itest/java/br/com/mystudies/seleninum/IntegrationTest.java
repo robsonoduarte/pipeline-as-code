@@ -15,7 +15,7 @@ import com.thoughtworks.selenium.Selenium;
 import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
 
 
-public class SeleniumIT {
+public class IntegrationTest {
 
 	private Selenium selenium;
 
@@ -38,8 +38,9 @@ public class SeleniumIT {
 
 
 
+
 	@Test
-	public void testSelinum() throws Exception {
+	public void integrationTest() throws Exception {
 		selenium.open("/selenium-test/");
 		selenium.type("id=name", "Robson");
 		selenium.type("id=password", "Ana");

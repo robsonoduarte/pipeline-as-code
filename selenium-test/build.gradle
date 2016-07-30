@@ -75,3 +75,9 @@ task dockerImage(type: Docker, dependsOn: war) {
 	applicationName = 'empresas'
 	addFile war.archivePath, '/var/lib/jetty/webapps/' + war.archiveName
 }
+
+
+
+jmeterRun.configure {
+    jmeterTestFiles = [file("src/test/resources/jmeter/test.jmx")]
+}

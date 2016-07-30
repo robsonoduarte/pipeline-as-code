@@ -1,11 +1,12 @@
-Jenkins Pipeline as Code
+Jenkins Pipeline as Code Example
 ---------------------------------------------------------------------------------------
 * Selenium 
 * PhantomJS 
 * Junit 
 * Gradle 
-* Test Integration
-* Test Performance 
+* Unit Test
+* Integration Test
+* Performance Test 
 * Docker 
 * Jmeter 
 

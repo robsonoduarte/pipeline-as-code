@@ -7,14 +7,14 @@ import org.junit.Test;
 
 public class SeleniumTest {
 
-	
-	
+
+
 	@Test
-	public void test() {
+	public void unitTest() {
 		assertThat("unit test", equalTo("unit test"));
 	}
 
-	
-	
-	
+
+
+
 }

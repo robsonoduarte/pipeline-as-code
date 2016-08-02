@@ -2,11 +2,9 @@ Jenkins Pipeline as Code Example
 ---------------------------------------------------------------------------------------
 * Selenium 
 * PhantomJS 
-* Junit 
+* JUnit 
 * Gradle 
-* Unit Test
-* Integration Test
-* Performance Test 
+* Test (Unit, Integration, Performance)
 * Docker 
 * Jmeter 
 

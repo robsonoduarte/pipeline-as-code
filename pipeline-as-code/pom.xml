@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.mystudies</groupId>
-    <artifactId>selenium-test</artifactId>
+    <artifactId>pipeline-as-code</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 

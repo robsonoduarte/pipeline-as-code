@@ -1,2 +1,8 @@
 FROM ubuntu:16.10
-RUN sudo apt-get update && apt-get install openjdk-8-jdk -y
+RUN apt-get update && apt-get install -y openjdk-8-jdk 
+RUN apt-get install wget
+RUN wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key |  apt-key add -
+RUN sh -c 'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+RUN apt-get update &&  apt-get -y  install jenkins 
+RUN apt-get update &&  apt-get -y install gradle
+

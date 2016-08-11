@@ -1,5 +1,12 @@
 Jenkins Pipeline as Code Example
 ---------------------------------------------------------------------------------------
+
+Before of explanation about all technologies, let's run first the example to see the Jenkins Pipeline as Code in Action like the image below:
+
+[image]
+
+*README IN CONSTRUTION*
+
 * Selenium 
 * PhantomJS 
 * JUnit 
@@ -8,6 +15,3 @@ Jenkins Pipeline as Code Example
 * Docker 
 * Jmeter 
 * Java
-
-
-*README IN CONSTRUTION*

@@ -5,6 +5,8 @@ Before of explanation about all technologies, let's run first the example to see
 
 [image]
 
+If you don't have the docker installed, [see here](https://www.docker.com/products/docker)how install it.
+
 *README IN CONSTRUTION*
 
 * Selenium 

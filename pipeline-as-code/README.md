@@ -5,10 +5,10 @@ Before of explanation about all technologies, let's run first the example to see
 
 [image]
 
-If you don't have the docker installed, [see here](https://www.docker.com/products/docker) how install it.
+If you don't have the docker installed [see here](https://www.docker.com/products/docker) how install it.
 
 
-**Run Docker Image**
+**Run Docker Image:**
 ```
 docker run -p 8080:8080 -p 50000:50000 robsonoduarte/tests:pipeline-as-code
 

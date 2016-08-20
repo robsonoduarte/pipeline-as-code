@@ -10,17 +10,17 @@ If you don't have the docker installed [see here](https://www.docker.com/product
 
 **Run Docker Image:**
 ```
-docker run -p 8080:8080 -p 50000:50000 robsonoduarte/tests:pipeline-as-code
+docker run -p 8080:8080 -p 50000:50000 robsonoduarte/tests
 
 ```
 
 *README IN CONSTRUTION*
 
-* Selenium 
-* PhantomJS 
-* JUnit 
-* Gradle 
+* Selenium
+* PhantomJS
+* JUnit
+* Gradle
 * Test (Unit, Integration, Performance)
-* Docker 
-* Jmeter 
+* Docker
+* Jmeter
 * Java

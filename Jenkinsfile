@@ -9,10 +9,10 @@ node{
    sh './gradlew test'
 
    stage 'Run Build Docker Image'
-   sh './gradlew dockerImage'
+   echo './gradlew dockerImage'
 
    stage 'Run Docker Image'
-   echo 'docker run ...'
+   sh 'docker -v'
 
    stage 'Run Integration Tests'
    echo './gradlew itest'

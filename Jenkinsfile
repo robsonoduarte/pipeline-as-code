@@ -3,19 +3,19 @@ node{
    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/robsonoduarte/tests.git']]])
 
    stage 'Run Assemble Project'
-   sh './gradle assemble'
+   sh './gradlew assemble'
 
    stage 'Run Unit Tests '
-   sh './gradle test'
+   sh './gradlew test'
 
    stage 'Run Build Docker Image'
-   sh './gradle dockerImage'
+   sh './gradlew dockerImage'
 
    stage 'Run Docker Image'
-   sh './docker run ...'
+   echo 'docker run ...'
 
    stage 'Run Integration Tests'
-   sh './gradle itest'
+   echo './gradlew itest'
 
 }
 

@@ -12,7 +12,7 @@ node{
    echo './gradlew dockerImage'
 
    stage 'Run Docker Image'
-   sh 'docker -v'
+   sh 'uname -r'
 
    stage 'Run Integration Tests'
    echo './gradlew itest'

@@ -70,7 +70,7 @@ task itest(type: Test) {
 docker {
 	baseImage 'jetty:9.3.10-jre8-alpine'
     useApi true
-    hostUrl 'http://172.17.0.2:4243'
+    hostUrl 'http://172.17.0.2:2375'
 }
 
 

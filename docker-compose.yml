@@ -1,0 +1,12 @@
+jenkins:
+  build: .
+  ports:
+   - "8080:8080"
+   - "50000:50000"
+  links:
+   - docker
+docker:
+  ports:
+  - "2375:2375"
+  image: docker:dind
+  privileged: true

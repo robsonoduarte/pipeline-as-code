@@ -1,4 +1,4 @@
-Jenkins Pipeline as Code Example
+Jenkins Pipeline as Code with Gradle
 ---------------------------------------------------------------------------------------
 
 Before of explanation about all technologies let's run first the example to see the *Jenkins Pipeline as Code in Action* like the image below:

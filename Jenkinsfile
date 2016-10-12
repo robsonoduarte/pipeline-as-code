@@ -9,7 +9,7 @@ node{
    sh './gradlew test'
 
    stage 'Run Build Docker Image'
-   sh './gradlew dockerImage'
+   sh './gradlew buildImage'
 
    stage 'Run Docker Image'
    sh 'uname -r'

@@ -1,7 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
-apply plugin: 'com.bmuschko.docker-remote-api'
+apply plugin: 'application'
+apply plugin: 'com.bmuschko.docker-java-application'
 
 
 buildscript {
@@ -34,7 +35,7 @@ dependencies {
 
 
 
-
+mainClassName = 'br.com.mystudies.seleninum.Application'
 
 
 
@@ -51,21 +52,10 @@ bootRun {
 
 docker {
     url = 'http://192.168.99.100:2375/'
+    
+    javaApplication {
+        baseImage = 'robsonoduarte/8-jre-alpine-bash'
+        maintainer = 'Robson Duarte "@robsonoduarte"'
+        ports = [8080]
+    }
 }
-
-
-import com.bmuschko.gradle.docker.tasks.image.Dockerfile
-import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
-
-
-task createDockerfile(type: Dockerfile) {
-    destFile = project.file('build/docker/Dockerfile')
-    from 'openjdk:8-jre-alpine'
-}
-
-
-task buildImage(type: DockerBuildImage) {
-    dependsOn createDockerfile
-    inputDir = createDockerfile.destFile.parentFile
-}
-

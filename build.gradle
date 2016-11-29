@@ -11,7 +11,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.bmuschko:gradle-docker-plugin:3.0.3'
-        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE'
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE'
     }
 }
 
@@ -21,10 +21,10 @@ repositories {
 
 
 dependencies {
-	
+
 	compile 'org.springframework.boot:spring-boot-starter-security'
 	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    compile 'org.springframework.boot:spring-boot-devtools'	
+    compile 'org.springframework.boot:spring-boot-devtools'
 
 	testCompile'com.codeborne:phantomjsdriver:1.3.0'
 	testCompile 'junit:junit:4.12'
@@ -52,7 +52,7 @@ bootRun {
 
 docker {
     url = 'http://192.168.99.100:2375/'
-    
+
     javaApplication {
         baseImage = 'robsonoduarte/8-jre-alpine-bash'
         maintainer = 'Robson Duarte "@robsonoduarte"'

@@ -1,53 +1,30 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'war'
-apply plugin: 'docker'
-apply plugin: 'jmeter'
+apply plugin: 'spring-boot'
+apply plugin: 'application'
+apply plugin: 'com.bmuschko.docker-java-application'
 
 
 buildscript {
     repositories {
-    	mavenCentral()
-    	jcenter()
+        jcenter()
     }
-
     dependencies {
-        classpath 'se.transmode.gradle:gradle-docker:1.2'
-        classpath 'com.github.kulya:jmeter-gradle-plugin:1.3.4-2.13'
+        classpath 'com.bmuschko:gradle-docker-plugin:3.0.3'
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE'
     }
-
 }
-
-
-
-
-configurations {
-    provided
-    compile.extendsFrom provided
-    itestCompile.extendsFrom testCompile
-    itestRuntime.extendsFrom testRuntime
-}
-
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
-
-sourceSets {
-    itest {
-        java {
-            compileClasspath += main.output + test.output
-            runtimeClasspath += main.output + test.output
-            srcDir file('src/integration-test/java')
-        }
-        resources.srcDir file('src/integration-test/resources')
-    }
-}
-
 
 
 dependencies {
-	provided 'javax:javaee-web-api:7.0'
+
+	compile 'org.springframework.boot:spring-boot-starter-security'
+	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'org.springframework.boot:spring-boot-devtools'
 
 	testCompile'com.codeborne:phantomjsdriver:1.3.0'
 	testCompile 'junit:junit:4.12'
@@ -56,33 +33,29 @@ dependencies {
 }
 
 
-task itest(type: Test) {
-  testClassesDir = sourceSets.itest.output.classesDir
-  classpath = sourceSets.itest.runtimeClasspath
 
-  testLogging {
-    events "passed", "skipped", "failed"
-  }
+
+mainClassName = 'br.com.mystudies.seleninum.Application'
+
+
+
+
+// SPRINT BOOT
+
+bootRun {
+    addResources = true
 }
 
 
+
+// DOCKER
 
 docker {
-	baseImage 'jetty:9.3.10-jre8-alpine'
-    useApi true
-    hostUrl 'http://172.17.0.2:2375'
-}
+    url = 'http://192.168.99.100:2375/'
 
-
-
-
-task dockerImage(type: Docker, dependsOn: war) {
-	applicationName = 'empresas'
-	addFile war.archivePath, '/var/lib/jetty/webapps/' + war.archiveName
-}
-
-
-
-jmeterRun.configure {
-    jmeterTestFiles = [file("src/test/resources/jmeter/test.jmx")]
+    javaApplication {
+        baseImage = 'robsonoduarte/8-jre-alpine-bash'
+        maintainer = 'Robson Duarte "@robsonoduarte"'
+        ports = [8080]
+    }
 }

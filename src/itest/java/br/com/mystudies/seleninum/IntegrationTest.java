@@ -1,23 +1,8 @@
 package br.com.mystudies.seleninum;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertThat;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import com.thoughtworks.selenium.Selenium;
-import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
-
-
 public class IntegrationTest {
 
-	private Selenium selenium;
+/*	private Selenium selenium;
 
 
 
@@ -62,5 +47,5 @@ public class IntegrationTest {
 		return desiredCapabilities;
 	}
 
-
+*/
 }

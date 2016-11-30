@@ -8,5 +8,5 @@ jenkins:
 docker:
   ports:
   - "2375:2375"
-  image: docker:dind
+  image: docker:1.12.3-dind
   privileged: true

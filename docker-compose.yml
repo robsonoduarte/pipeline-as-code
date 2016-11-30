@@ -10,3 +10,4 @@ docker:
   - "2375:2375"
   image: docker:1.12.3-dind
   privileged: true
+  dns: 8.8.8.8

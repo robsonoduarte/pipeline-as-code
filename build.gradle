@@ -51,7 +51,7 @@ bootRun {
 // DOCKER
 
 docker {
-    url = 'http://192.168.99.100:2375/'
+    url = 'http://172.17.0.2:2375/'
 
     javaApplication {
         baseImage = 'robsonoduarte/8-jre-alpine-bash'

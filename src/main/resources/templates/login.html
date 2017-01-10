@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 	<meta charset="UTF-8"></meta>
 	<title>Pipeline as Code</title>
@@ -15,18 +14,18 @@ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 				<strong>Welcome.</strong> Please login.
 			</h1>
 			<form th:action="@{/login}" method="post">
-				<input type="text" 
-					name="user" 
+				<input type="text"
+					name="user"
 					placeholder="Username"
-					required="required" 
-					class="input-txt" /> 
-				
-				<input type="password" 
-					name="password" 
-					placeholder="Password" 
-					required="required" 
+					required="required"
 					class="input-txt" />
-				
+
+				<input type="password"
+					name="password"
+					placeholder="Password"
+					required="required"
+					class="input-txt" />
+
 				<div class="login-footer">
 					<button type="submit" class="btn btn--right">Sign in</button>
 				</div>

@@ -54,9 +54,28 @@ bootRun {
 docker {
     url = 'http://172.17.0.2:2375/'
 
+
+	registryCredentials {
+	    username = project.dockerHubUser
+	    password = project.dockerHubPassword
+	    email = project.dockerHubEmail
+	}
+
     javaApplication {
         baseImage = 'robsonoduarte/8-jre-alpine-bash'
         maintainer = 'Robson Duarte "@robsonoduarte"'
         ports = [8080]
     }
+
+
 }
+
+
+
+task pull(type: com.bmuschko.gradle.docker.tasks.image.DockerPullImage) {
+  repository = "${project.docker.registryCredentials.username}/${project.name}"
+  tag = 'latest'
+}
+
+
+

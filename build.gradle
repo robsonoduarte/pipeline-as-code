@@ -71,8 +71,9 @@ docker {
 }
 
 task push(type: com.bmuschko.gradle.docker.tasks.image.DockerPushImage) {
-  repository = "${project.docker.registryCredentials.username}/${project.name}"
-  tag = 'latest'
+//  imageName	=
+//  repository = "${project.docker.registryCredentials.username}/${project.name}"
+//  tag = 'latest'
 }
 
 

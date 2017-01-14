@@ -70,6 +70,14 @@ docker {
 
 }
 
+task tag(type: com.bmuschko.gradle.docker.tasks.image.DockerTagImage) {
+	dependsOn 'dockerBuildImage'
+	force = true
+    repository = 'robsonoduarte'
+    //targetImageId { buildImage.getImageId() }
+    //tag = p
+}
+
 
 
 task pull(type: com.bmuschko.gradle.docker.tasks.image.DockerPullImage) {

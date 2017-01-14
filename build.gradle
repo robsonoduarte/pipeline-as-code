@@ -56,9 +56,9 @@ docker {
 
 
 	registryCredentials {
-	    username = project.dockerHubUser
-	    password = project.dockerHubPassword
-	    email = project.dockerHubEmail
+	    username = 'robsonoduarte'
+	    password = 'j@v@developer@nosbor'
+	    email = 'robson.o.d@gmail.com'
 	}
 
     javaApplication {

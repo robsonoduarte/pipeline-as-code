@@ -40,7 +40,6 @@ mainClassName = 'br.com.mystudies.seleninum.Application'
 
 
 
-
 // SPRINT BOOT
 
 bootRun {
@@ -50,14 +49,12 @@ bootRun {
 
 
 // DOCKER
-
 docker {
     url = 'http://172.17.0.2:2375/'
 
-
 	registryCredentials {
-	    username = 'robsonoduarte'
-	    password = 'j@v@developer@nosbor'
+	    username = ''
+	    password = ''
 	    email = 'robson.o.d@gmail.com'
 	}
 
@@ -66,24 +63,4 @@ docker {
         maintainer = 'Robson Duarte "@robsonoduarte"'
         ports = [8080]
     }
-
-
 }
-
-task tag(type: com.bmuschko.gradle.docker.tasks.image.DockerTagImage) {
-	dependsOn 'dockerBuildImage'
-	force = true
-    repository = 'robsonoduarte'
-    //targetImageId { buildImage.getImageId() }
-    //tag = p
-}
-
-
-
-task pull(type: com.bmuschko.gradle.docker.tasks.image.DockerPullImage) {
-  repository = "${project.docker.registryCredentials.username}/${project.name}"
-  tag = 'latest'
-}
-
-
-

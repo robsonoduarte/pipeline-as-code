@@ -37,7 +37,7 @@ dependencies {
 
 
 mainClassName = 'br.com.mystudies.seleninum.Application'
-
+apply plugin: 'com.bmuschko.docker-java-application'
 
 
 // SPRINT BOOT
@@ -53,8 +53,8 @@ docker {
     url = 'http://172.17.0.2:2375/'
 
 	registryCredentials {
-	    username = ''
-	    password = ''
+	    username = 'robsonoduarte'
+	    password = 'pwd'
 	    email = 'robson.o.d@gmail.com'
 	}
 
@@ -64,3 +64,4 @@ docker {
         ports = [8080]
     }
 }
+
